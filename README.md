@@ -22,8 +22,44 @@
 | **Clean UI** | Wide layout, responsive, user-friendly |
 | **No Scaling Needed** | V1–V28 already PCA-transformed |
 
+
 ---
 
+## How It Works
+
+### 1. **Data Preprocessing**
+```python
+legit = data[data.Class == 0]
+fraud = data[data.Class == 1]
+legit_sample = legit.sample(n=len(fraud))
+balanced = pd.concat([legit_sample, fraud])
+```
+### 2. Train-Test Split
+```
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.2, stratify=y, random_state=2
+)
+```
+### 3. Model
+
+```
+model = LogisticRegression()
+model.fit(X_train, y_train)
+```
 
 
-## Project Structure
+### 4. Prediction
+
+User inputs: Time, V1, V2, ..., V28, Amount
+Model predicts: 0 = Legitimate | 1 = Fraudulent
+
+V1 to V28 – What Are They?
+
+Anonymized PCA Components
+
+Original features (card number, location, merchant, etc.) were transformed using Principal Component Analysis (PCA).
+V1–V28 = New numerical features (no real-world meaning).
+Privacy preserved – cannot reverse to original data.
+
+
+You input numerical values only – just like in the dataset.
