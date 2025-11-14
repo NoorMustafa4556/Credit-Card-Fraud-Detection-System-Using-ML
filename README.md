@@ -35,19 +35,19 @@
 ## How It Works
 
 ### 1. **Data Preprocessing**
-**legit**
+### **legit**
 ```python
 legit = data[data.Class == 0]
 ```
-**fraud**
+### **fraud**
 ```
 fraud = data[data.Class == 1]
 ```
-**legit sample**
+### **legit sample**
 ```
 legit_sample = legit.sample(n=len(fraud))
 ```
-**balanced**
+### **balanced**
 ```
 balanced = pd.concat([legit_sample, fraud])
 ```
@@ -61,6 +61,8 @@ X_train, X_test, y_train, y_test = train_test_split(
 
 ```
 model = LogisticRegression()
+```
+```
 model.fit(X_train, y_train)
 ```
 
