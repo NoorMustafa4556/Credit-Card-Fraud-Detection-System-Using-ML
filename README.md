@@ -79,4 +79,5 @@ V1–V28 = New numerical features (no real-world meaning).
 Privacy preserved – cannot reverse to original data.
 
 
+
 You input numerical values only – just like in the dataset.
