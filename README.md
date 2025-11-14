@@ -4,6 +4,10 @@
 ![scikit--learn](https://img.shields.io/badge/scikit_learn-1.3%2B-orange)  
 ![License](https://img.shields.io/badge/License-MIT-green)
 
+## Data Set Download Link
+    https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud
+
+---
 > **Real-time fraud detection web app** using **Logistic Regression** and **Streamlit**.  
 > Upload any `creditcard.csv`, auto-balance classes, train instantly, and test transactions with **30 features** (`Time`, `V1–V28`, `Amount`).  
 > **V1–V28 are PCA-anonymized** – privacy preserved.
@@ -17,7 +21,7 @@
 
 | Feature | Description |
 |-------|-----------|
-| **CSV Upload** | Upload any Kaggle-style `creditcard.csv` |
+| **CSV Upload** | Upload Data set Downloaded From Kaggle `creditcard.csv` |
 | **Auto-Balancing** | Undersamples legit class to match fraud count |
 | **Instant Training** | Logistic Regression trains in seconds |
 | **Real-time Prediction** | Enter 30 feature values → get **Fraud / Legit** result |
