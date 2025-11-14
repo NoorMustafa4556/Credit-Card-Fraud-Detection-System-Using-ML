@@ -35,10 +35,20 @@
 ## How It Works
 
 ### 1. **Data Preprocessing**
+**legit**
 ```python
 legit = data[data.Class == 0]
+```
+**fraud**
+```
 fraud = data[data.Class == 1]
+```
+**legit sample**
+```
 legit_sample = legit.sample(n=len(fraud))
+```
+**balanced**
+```
 balanced = pd.concat([legit_sample, fraud])
 ```
 ### 2. Train-Test Split
